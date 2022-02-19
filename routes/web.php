@@ -21,6 +21,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/user/logout', [App\Http\Controllers\Auth\LoginController::class, 'userlogout'])->name('user.logout');
+Route::post('enquriy', [App\Http\Controllers\ProductController::class, 'enquriy'])->name('enquriy');
 
 
 Route::group(['prefix' => 'admin'], function() {
@@ -32,5 +33,8 @@ Route::group(['prefix' => 'admin'], function() {
     Route::group(['middleware' => 'admin.auth'], function(){
         Route::get('/dashboard',[App\Http\Controllers\Admin\DashboardController::class, 'dashboard'])->name('admin.dashboard');
         Route::get('/logout', [App\Http\Controllers\AdminController::class, 'logout'])->name('admin.logout');
+        Route::get('productshow', [App\Http\Controllers\Admin\AllController::class, 'fruit'])->name('productshow');
+        Route::get('productcreate', [App\Http\Controllers\Admin\AllController::class, 'fruitcreate'])->name('productcreate');
+
     });
 });

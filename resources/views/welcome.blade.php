@@ -102,24 +102,25 @@
                                                         aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <form>
+                                                    <form action="{{route('enquriy')}}" method="post">
+                                                        {{ csrf_field() }}
                                                         <div class="form-group mb-2">
-                                                            <input type="text" class="form-control"
+                                                            <input type="text" class="form-control" name="name" 
                                                                 placeholder="Enter Your Name" id="exampleInputEmail1"
                                                                 aria-describedby="emailHelp" placeholder="Enter email">
                                                         </div>
                                                         <div class="form-group mb-2">
-                                                            <input type="password" class="form-control"
+                                                            <input type="email" class="form-control" name="email"
                                                                 placeholder="Enter Your Email"
                                                                 id="exampleInputPassword1" placeholder="Password">
                                                         </div>
                                                         <div class="form-group mb-2">
-                                                            <input type="number" class="form-control"
+                                                            <input type="number" class="form-control" name="phone" 
                                                                 placeholder="Enter Your Phone No."
                                                                 id="exampleInputPassword1" placeholder="Password">
                                                         </div>
                                                         <div class="form-group mb-2">
-                                                            <input type="text" class="form-control"
+                                                            <input type="text" class="form-control" name="message"
                                                                 placeholder="Write Your Message Here"
                                                                 id="exampleInputPassword1" placeholder="Password">
                                                         </div>
