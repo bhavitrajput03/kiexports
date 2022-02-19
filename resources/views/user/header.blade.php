@@ -68,9 +68,7 @@
                             <li><a class="dropdown-item" href="key_person.html">Key Person</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sourcing_agent.html">Sourcing Agent</a>
-                    </li>
+                    
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
