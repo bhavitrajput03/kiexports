@@ -86,7 +86,7 @@
                                 vegetables contain important vitamins, minerals & plant chemicals…</p>
                             <div class="buttongroup">
                                 <div class="viewbutton">
-                                    <a href="#" class="btn btn-primary"><i class="fa-solid fa-eye"></i></a>
+                                    <a href="{{route('fruits-vegetables')}}" class="btn btn-primary"><i class="fa-solid fa-eye"></i></a>
                                 </div>
                                 <div class="popupbutton">
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"

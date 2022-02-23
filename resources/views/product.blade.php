@@ -41,70 +41,17 @@
                 <h1 class="text-center mb-3" style="color: rgb(189, 115, 5);">
                     Fruit Products
                 </h1>
+                @foreach($fruits as $fruit)
                 <div class="col-md-3">
                     <div class="card mb-4 shadow" style="border: 2px solid orange;">
-                        <img src="img/01.jpg" class="card-img-top" alt="...">
+                        <img src="/public/fruit/{{$fruit->img}}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title vergtitel text-center">Aman Singh</h5>
+                            <h5 class="card-title vergtitel text-center">{{$fruit->title}}</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card mb-4 shadow" style="border: 2px solid orange;">
-                        <img src="img/02.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title vergtitel text-center">Aman Singh</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card mb-4 shadow" style="border: 2px solid orange;">
-                        <img src="img/03.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title vergtitel text-center">Aman Singh</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card mb-4 shadow" style="border: 2px solid orange;">
-                        <img src="img/04.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title vergtitel text-center">Aman Singh</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card mb-4 shadow" style="border: 2px solid orange;">
-                        <img src="img/05.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title vergtitel text-center">Aman Singh</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card mb-4 shadow" style="border: 2px solid orange;">
-                        <img src="img/06.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title vergtitel text-center">Aman Singh</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card mb-4 shadow" style="border: 2px solid orange;">
-                        <img src="img/07.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title vergtitel text-center">Aman Singh</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card mb-4 shadow" style="border: 2px solid orange;">
-                        <img src="img/08.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title vergtitel text-center">Aman Singh</h5>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+                
             </div>
         </div>
     </section>
@@ -213,4 +160,4 @@
             </div>
         </div>
     </section>
-    @include(user.footer)
+    @include('user.footer')

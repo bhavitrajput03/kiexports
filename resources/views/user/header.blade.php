@@ -75,7 +75,7 @@
                             Products
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="products.html">Spices</a></li>
+                            <li><a class="dropdown-item" href="{{route('fruits-vegetables')}}">Spices</a></li>
                             <li><a class="dropdown-item" href="#">Grocery</a></li>
                             <li><a class="dropdown-item" href="#">Namkeen & Frozen</a></li>
                             <li><a class="dropdown-item" href="#">Handicraft</a></li>

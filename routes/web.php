@@ -17,11 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::post('/user/logout', [App\Http\Controllers\Auth\LoginController::class, 'userlogout'])->name('user.logout');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::post('/user/logout', [App\Http\Controllers\Auth\LoginController::class, 'userlogout'])->name('user.logout');
 Route::post('enquriy', [App\Http\Controllers\ProductController::class, 'enquriy'])->name('enquriy');
+Route::get('/fruits-vegetables', [App\Http\Controllers\HomeController::class, 'fruitsvegetables'])->name('fruits-vegetables');
 
 
 Route::group(['prefix' => 'admin'], function() {
@@ -35,6 +36,10 @@ Route::group(['prefix' => 'admin'], function() {
         Route::get('/logout', [App\Http\Controllers\AdminController::class, 'logout'])->name('admin.logout');
         Route::get('productshow', [App\Http\Controllers\Admin\AllController::class, 'fruit'])->name('productshow');
         Route::get('productcreate', [App\Http\Controllers\Admin\AllController::class, 'fruitcreate'])->name('productcreate');
+        Route::post('productstore', [App\Http\Controllers\Admin\AllController::class, 'fruitstore'])->name('productstore');
+        Route::get('productedit/{id}', [App\Http\Controllers\Admin\AllController::class, 'fruitedit'])->name('productedit');
+
+
 
     });
 });

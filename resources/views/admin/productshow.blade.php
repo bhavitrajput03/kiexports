@@ -31,39 +31,19 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach($products as $product)
                                             <tr>
                                                 <td>1</td>
-                                                <td>Deshmukh</td>
+                                                <td>{{$product->title}}</td>
                                                 <td>
-                                                    <img src="_20170719_163600.JPG" class="tableimg" alt="">
+                                                    <img src="/public/fruit/{{$product->img}}" class="tableimg" alt="">
                                                 </td>
                                                 <td>
-                                                    <a href="editproduct.html" class="editbutton">Edit</a>
+                                                    <a href="{{route('productedit',[$product->id])}}" class="editbutton">Edit</a>
                                                     <a href="" class="deletebutton">Delete</a>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Deshmukh</td>
-                                                <td>
-                                                    <img src="_20170719_163600.JPG" class="tableimg" alt="">
-                                                </td>
-                                                <td>
-                                                    <a href="editproduct.html" class="editbutton">Edit</a>
-                                                    <a href="" class="deletebutton">Delete</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Sanghani</td>
-                                                <td>
-                                                    <img src="_20170719_163600.JPG" class="tableimg" alt="">
-                                                </td>
-                                                <td>
-                                                    <a href="editproduct.html" class="editbutton">Edit</a>
-                                                    <a href="" class="deletebutton">Delete</a>
-                                                </td>
-                                            </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
